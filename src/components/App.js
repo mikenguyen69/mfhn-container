@@ -12,18 +12,19 @@ const {
   REACT_APP_LINK_HOST: linkHost,
 } = process.env;
 
-const Search = ({ history }) => (
-  <MicroFrontend history={history} host={searchHost} name="Browse" />
-);
-const Link = ({ history }) => (
-  <MicroFrontend history={history} host={linkHost} name="Link" />
-);
-
 function App() {
-  const user = useAuth();
+  const user = useAuth();  
+
+  const Link = ({ history }) => (
+    <MicroFrontend history={history} user={user} host={linkHost} name="Link" />  
+  );
+  
+  const Search = ({ history }) => (
+    <MicroFrontend history={history} user={user} host={searchHost} name="Browse" />
+  );
 
   return (
-  <BrowserRouter>
+  <BrowserRouter> 
       <FirebaseContext.Provider value={{user, firebase}}>
         <div className="app-container">
           <AppHeader />
