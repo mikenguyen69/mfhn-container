@@ -23,15 +23,13 @@ function AppHeader() {
         search
       </NavLink>
       <div className="divider"></div>
-      {user && (
-        <>
+      {/* {user && (
+        <> */}
           <NavLink to="/create" className="header-link">
             submit
           </NavLink>
-        </>
-      )
-      
-      }
+        {/* </>
+      )} */}
     </div>
 
     <div className="flex">
