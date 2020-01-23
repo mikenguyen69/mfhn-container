@@ -12,15 +12,15 @@ import AppHeader from './AppHeader';
 import MicroFrontend from './MicroFrontend';
 
 const {
-  REACT_APP_BROWSE_HOST: browseHost,
-  REACT_APP_RESTAURANT_HOST: restaurantHost,
+  REACT_APP_SEARCH_HOST: searchHost,
+  REACT_APP_LINK_HOST: linkHost,
 } = process.env;
 
-const Browse = ({ history }) => (
-  <MicroFrontend history={history} host={browseHost} name="Browse" />
+const Search = ({ history }) => (
+  <MicroFrontend history={history} host={searchHost} name="Browse" />
 );
-const Restaurant = ({ history }) => (
-  <MicroFrontend history={history} host={restaurantHost} name="Restaurant" />
+const Link = ({ history }) => (
+  <MicroFrontend history={history} host={linkHost} name="Link" />
 );
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
               <Route path="/create" component={CreateLink} />
               <Route path="/login" component={Login} />
               <Route path="/forgot" component={ForgotPassword} />
-              <Route path="/search" component={SearchLinks} />
+              <Route path="/search" component={Search} />
               <Route path="/top" component={LinkList} />
               <Route path="/new/:page" component={LinkList} />
               <Route path="/link/:linkId" component={LinkDetail} />
