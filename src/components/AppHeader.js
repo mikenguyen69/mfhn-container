@@ -7,7 +7,7 @@ function AppHeader() {
 
   return <div className="header">
     <div className="flex">
-      <img src="./logo.png" alt="Hooks News Logo" className="logo" />
+      <img src="/logo.png" alt="Hooks News Logo" className="logo" />
       <NavLink to="/" className="header-title">
         Hooks News
       </NavLink>
